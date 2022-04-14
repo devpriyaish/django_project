@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <h1> Your Friend List </h1>
+  {% if friends %}
+    {% for friend in friends %}
+      <ul>
+        <li class="">{{ friend }}
+          <a href="{% url 'remove-friends' friend.id %}">
+            <button style="float: right" type="submit">Remove Friend</button>
+          </a>
+          <a href="{% url 'about-friend' friend.id %}">
+            <button style="float: right" type="submit">Visit Profile</button>
+          </a>
+        </li>
+      </ul>
+    {% endfor %}
+  {% else %}
+    <p>Not found any friend</p>
+  {% endif %}
+{% endblock content %}

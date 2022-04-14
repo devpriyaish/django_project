@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <h1> About Page </h1>
+  <script>
+    myJSON = {{ my_json|safe }};
+  </script>
+  {{ template_context }}
+  {{ template_context.author }}
+  {% for context in template_context %}
+    {{ context }}
+  {% endfor %}
+{% endblock content %}

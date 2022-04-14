@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <h1> About {{ user_info.username }} </h1>
+    <img class="" src="{{ friend_info.image.url }}">
+    <ul>
+      <li>Full Name: {{ user_info.first_name }} {{ user_info.last_name }}</li>
+      <li>Email: {{ user_info.email }}</li>
+      <li> Mobile Number: {{ friend_info.mobile_number }} </li>
+      <li>Gender: {{ friend_info.gender }}</li>
+      <li>Born On: {{ friend_info.date_of_birth }}</li>
+      <li>Country: {{ friend_info.country }}</li>
+      <li>Joined us on: {{ user_info.date_joined }}</li>
+    </ul>
+{% endblock content %}
